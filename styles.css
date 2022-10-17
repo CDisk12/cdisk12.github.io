@@ -1,0 +1,47 @@
+body {
+	background-color: cyan;
+  	font-family: sans-serif;
+  	padding: 20px;
+  	font-size: 12px;
+}
+
+.resume{
+	width: 80%;
+  	background-color: white;
+  	margin-left: auto;
+  	margin-right: auto;
+  	padding: 20px;
+  	max-width: 500px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  align-content: right;
+}
+
+.phone{
+	color: #660000;
+
+}
+
+.email{
+	color: #0000CD;
+	font-style: serif;
+}
+
+.objective{
+	text-align: center;
+
+}
+
+.year *{
+	text-align: right;
+	margin: 15;
+}
+
+.title *{
+	text-align: left;
+	width: 25%;
+}
