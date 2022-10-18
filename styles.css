@@ -14,12 +14,7 @@ body {
   	max-width: 500px;
 }
 
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  align-content: right;
-}
+
 
 .phone{
 	color: #660000;
@@ -41,7 +36,43 @@ img {
 	margin: 15;
 }
 
-.title *{
+.title {
 	text-align: left;
-	width: 25%;
+	font-size:  18px;
+  font-family: serif;
+}
+
+.text{
+  font-size: 12px;
+  font-family: Verdana, sans-serif;
+}
+
+.res{
+  font-family: Verdana;
+  font-size: 18px;
+}
+
+.info{
+  font-family:  serif;  
+}
+
+
+/*some extra*/
+.coll{
+  background-image: url("source/sky.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width:  100%;
+  border-width:   0px;
+  padding-top:  26px;
+  padding-right:  0px;
+  padding-bottom:  18px;
+  padding-left:   -16px;
+
+}
+.profile {
+  position: absolute;
+  top: 42px;
+  right: 112px;
+  border-radius:  50%;
 }
