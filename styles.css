@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 /*this catalog define the date the last time I update this resume*/
 /*CATALOG 22.10.20*/
+=======
+/*cleaner version of resume 10/18/22 edited by Bernal*/
+>>>>>>> 4ea584fce1c023951f59a19dcf70f33b9ec8d964
 
 body {
 	background-color: cyan;
@@ -76,7 +80,11 @@ body {
 .profile {
   position: absolute;
   top: 42px;
+<<<<<<< HEAD
   right: 28%;
+=======
+  right: 500px;
+>>>>>>> 4ea584fce1c023951f59a19dcf70f33b9ec8d964
   border-radius:  50%;
 }
 
