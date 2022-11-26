@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Survey Form</title>
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+:root {
+  --color-white: #f3f3f3;
+  --color-darkblue: #1b1b32;
+  --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+  --color-green: #37af65;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--color-white);
+  margin: 0;
+}
+
+/* mobile friendly alternative to using background-attachment: fixed */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-darkblue);
+  background-image: linear-gradient(
+      115deg,
+      rgba(58, 58, 158, 0.8),
+      rgba(136, 136, 206, 0.7)
+    ),
+    url(https://img.freepik.com/premium-vector/flat-social-media-background-with-computer_23-2147819105.jpg?w=2000);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h1 {
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 1.125rem;
+}
+
+h1,
+p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  border: none;
+}
+
+.container {
+  width: 100%;
+  margin: 3.125rem auto 0 auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+.header {
+  padding: 0 0.625rem;
+  margin-bottom: 1.875rem;
+}
+
+.description {
+  font-style: italic;
+  font-weight: 200;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.clue {
+  margin-left: 0.25rem;
+  font-size: 0.9rem;
+  color: #e4e4e4;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* form */
+
+form {
+  background: var(--color-darkblue-alpha);
+  padding: 2.5rem 0.625rem;
+  border-radius: 0.25rem;
+}
+
+@media (min-width: 480px) {
+  form {
+    padding: 2.5rem;
+  }
+}
+
+.form-group {
+  margin: 0 auto 1.25rem auto;
+  padding: 0.25rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 2.375rem;
+  padding: 0.375rem 0.75rem;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+
+.input-textarea {
+  min-height: 120px;
+  width: 100%;
+  padding: 0.625rem;
+  resize: vertical;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--color-green);
+  color: inherit;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+    </style>
+  </head>
+  <body data-new-gr-c-s-check-loaded="14.1083.0" data-gr-ext-installed="">
+    <div class="container">
+      <header class="header">
+        <h1 id="title" class="text-center">Quick Survey Form</h1>
+        <p id="description" class="description text-center">
+          Thank you for taking the time to take this survey
+        </p>
+      </header>
+      <form id="survey-form">
+        <div class="form-group">
+          <label id="name-label" for="name">Name<span class="clue">(optional)</span></label>
+          <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required="">
+        </div>
+        <div class="form-group">
+          <label id="number-label" for="number">Age</label>
+          <input type="number" name="age" id="number" min="18" max="108" class="form-control" placeholder="Age" required="">
+        </div>
+        <div class="form-group">
+          <p>Choose on the option your current occupation?</p>
+          <select id="dropdown" name="role" class="form-control" required="">
+            <option disabled="" selected="" value="">Select current role</option>
+            <option value="student">Student</option>
+            <option value="job">Full Time Job</option>
+            <option value="job">Part Time Job</option>
+            <option value="preferNo">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p>Do you stay long using your phone or other gadgets?</p>
+          <label>
+            <input name="user-recommend" value="Yes" type="radio" class="input-radio" checked="">Yes</label>
+          <label>
+            <input name="user-recommend" value="Occasionally" type="radio" class="input-radio">Occasionally</label>
+
+          <label><input name="user-recommend" value="No" type="radio" class="input-radio">No</label>
+        </div>
+
+        <div class="form-group">
+          <p>How many social accounts do you hold?</p>
+          <select id="most-like" name="mostLike" class="form-control" required="">
+            <option disabled="" selected="" value="">Select an option</option>
+            <option value="a1">≤ 1 </option>
+            <option value="a2">2-4 </option>
+            <option value="a3">≥ 5 </option>
+            <option value="not-saying">Prefer not to say</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p>
+            Media you usually use?
+            <span class="clue">(Check all that apply)</span>
+          </p>
+
+          <label><input name="prefer" value="youtube" type="checkbox" class="input-checkbox">YouTube</label>
+          <label>
+            <input name="prefer" value="Facebook" type="checkbox" class="input-checkbox">Facebook</label>
+          <label><input name="prefer" value="Twitter" type="checkbox" class="input-checkbox">Twitter</label>
+          <label><input name="prefer" value="Gmail" type="checkbox" class="input-checkbox">Gmail</label>
+          <label><input name="prefer" value="Discord" type="checkbox" class="input-checkbox">Discord</label>
+          <label><input name="prefer" value="Telegram" type="checkbox" class="input-checkbox">Telegram</label>
+          <label><input name="prefer" value="tiktok" type="checkbox" class="input-checkbox">TikTok</label>
+          <label><input name="prefer" value="Tinder" type="checkbox" class="input-checkbox">Tinder</label>
+          <label><input name="prefer" value="Instagram" type="checkbox" class="input-checkbox">Instagram</label>
+          <label><input name="prefer" value="Messenger" type="checkbox" class="input-checkbox">Messenger</label>
+          <label><input name="prefer" value="Quora" type="checkbox" class="input-checkbox">Quora</label>
+          <label><input name="prefer" value="Other" type="checkbox" class="input-checkbox">Other</label>
+        </div>
+
+        <div class="form-group">
+          <p>Any comments or suggestions?</p>
+          <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

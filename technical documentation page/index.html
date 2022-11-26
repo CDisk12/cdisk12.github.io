@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <title>HTML5 Documentation</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>HTML5 Documentation</header>
+      <ul>
+        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li>
+          <a class="nav-link" href="#What_you_should_already_know"
+            >What you should already know</a
+          >
+        </li>
+        <li>
+          <a class="nav-link" href="#Basic_HTML"
+            >Basic HTML</a
+          >
+        </li>
+        <li><a class="nav-link" href="#HTML_Elements">HTML Elements</a></li>
+        <li><a class="nav-link" href="#HTML_Attributes">HTML Attributes</a></li>
+        <li>
+          <a class="nav-link" href="#HTML_Styles"
+            >HTML Styles</a
+          >
+        </li>
+        <li><a class="nav-link" href="#HTML_Colors">HTML Colors</a></li>
+        <li>
+          <a class="nav-link" href="#HTML_Comments">HTML Comments</a>
+        </li>
+        <li><a class="nav-link" href="#HTML_class_Attribute">HTML class Attribute</a></li>
+        <li><a class="nav-link" href="#HTML_id_Attribute">HTML id Attribute</a></li>
+        <li>
+          <a class="nav-link" href="#HTML_CSS"
+            >HTML CSS</a
+          >
+        </li>
+        <li><a class="nav-link" href="#HTML_JavaScript">HTML JavaScript</a></li>
+        <li>
+          <a class="nav-link" href="#HTML_Versus_XHTML"
+            >HTML Versus XHTML</a
+          >
+        </li>
+        <li><a class="nav-link" href="#Reference">Reference</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <article>
+          <p>
+           HTML stands for HyperText Markup Language. 
+           It is used to design web pages using a markup language. 
+           HTML is the combination of Hypertext and Markup language. Hypertext defines the link between web pages. 
+           A markup language is used to define the text document within the tag which defines the structure of web pages. 
+          </p>
+
+          <p>
+            This language is used to annotate (make notes for the computer) text so that a machine can understand it and manipulate text accordingly. 
+            Most markup languages (e.g. HTML) are human-readable. 
+            The language uses tags to define what manipulation has to be done on the text. 
+          </p>
+        </article>
+      </section>
+      <br>
+      <section class="main-section" id="What_you_should_already_know">
+        <header>What you should already know</header>
+        <article>
+          <p>This guide assumes you have the following basic background:</p>
+
+          <ul>
+            <li>
+              HTML stands for Hyper Text Markup Language
+            </li>
+            <li>
+              HTML is the standard markup language for creating Web pages
+            </li>
+            <li>
+              HTML describes the structure of a Web page
+            </li>
+            <li>
+              HTML consists of a series of elements
+            </li>
+            <li>
+              HTML elements tell the browser how to display the content
+            </li>
+            <li>
+              HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.
+            </li>
+          </ul>
+        </article>
+      </section>
+      <br>
+      <section class="main-section" id="Basic_HTML">
+        <header>Basic HTML</header>
+        <article>
+          <h1>
+            HTML Documents
+          </h1>
+          <p>
+            All HTML documents must start with a document type declaration: <strong>&#60;!DOCTYPE html&#62;</strong>.
+          </p>
+          <p>
+            The HTML document itself begins with <strong>&#60;html&#62;</strong> and ends with <strong>&#60;/html&#62;</strong>.
+          </p>
+          <p>
+            The visible part of the HTML document is between <strong>&#60;body&#62;</strong> and <strong>&#60;/body&#62;</strong>.
+          </p>
+
+          <br>
+          <h1>
+            The &#60;!DOCTYPE&#62; Declaration
+          </h1>
+          <p>
+            The &#60;!DOCTYPE&#62; declaration represents the document type, and helps browsers to display web pages correctly.
+          </p>
+          <p>
+            It must only appear once, at the top of the page (before any HTML tags).
+          </p>
+          <p>
+            The &#60;!DOCTYPE&#62; declaration is not case sensitive.
+          </p>
+          <p>
+            The &#60;!DOCTYPE&#62; declaration for HTML5 is:
+          </p>
+          <code>&#60;<span class="element">!DOCTYPE</span> <span class="sub-element">html</span>&#62;</code>
+
+          <br>
+          <h1>
+            HTML Headings
+          </h1>
+          <p>
+            HTML headings are defined with the &#60;h1&#62; to &#60;h6&#62; tags.
+          </p>
+          <p>
+            &#60;h1&#62; defines the most important heading. &#60;h6&#62; defines the least important heading: 
+          </p>
+          <code>&#60;<span class="element">h1</span>&#62;This is heading 1&#60;<span class="element">/h1</span>&#62;
+            &#60;<span class="element">h2</span>&#62;This is heading 2&#60;<span class="element">/h2</span>&#62;
+            &#60;<span class="element">h3</span>&#62;This is heading 3&#60;<span class="element">/h3</span>&#62;
+          </code>
+
+          <br>
+          <h1>
+            HTML Paragraphs
+          </h1>
+          <p>
+            HTML paragraphs are defined with the &#60;p&#62; tag:
+          </p>
+          <code>&#60;<span class="element">p</span>&#62;This is a paragraph.&#60;<span class="element">/p</span>&#62;
+            &#60;<span class="element">p</span>&#62;This is another paragraph.&#60;<span class="element">/p</span>&#62;
+          </code>
+
+          <br>
+          <h1>
+            HTML Links
+          </h1>
+          <p>
+            HTML links are defined with the &#60;a&#62; tag:
+          </p>
+          <code>&#60;<span class="element">a</span> <span class="sub-element">href</span>=<span class="value">"https://www.myrepository.github.com.io"</span> &#62;My repository link.&#60;<span class="element">/a</span>&#62; 
+          </code>
+          <p>
+            The link's destination is specified in the href attribute.
+          </p>
+          <p>
+            Attributes are used to provide additional information about HTML elements.
+          </p>
+          <p>
+            You will learn more about attributes in a later chapter.
+          </p>
+
+          <br>
+          <h1>
+            HTML Images
+          </h1>
+          <p>HTML images are defined with the &#60;img&#62; tag.</p>
+          <p>The source file (src), alternative text (alt), width, and height are provided as attributes:</p>
+          <code>&#60;<span class="element">img</span> <span class="sub-element">src</span>=<span class="value">"img_girl.jpg"</span> <span class="sub-element">alt</span>=<span class="value">"beautiful girl"</span> <span class="sub-element">width</span>=<span class="value">"104"</span> <span class="sub-element">height</span>=<span class="value">"142"</span>&#62;
+          </code>
+        </article>
+      </section>
+      <br>
+      <section class="main-section" id="HTML_Elements">
+        <header>HTML Elements</header>
+        <article>
+          <p>
+            The HTML element is everything from the start tag to the end tag:
+          </p>
+          <p>
+            &#60;tagname&#62;Content goes here...&#60;/tagname&#62;
+          </p>
+          <p>
+            Examples of some HTML elements:
+          </p>
+          <p>
+            &#60;h1&#62;My First Heading&#60;/h1&#62;
+          </p>
+          <p>
+            &#60;p&#62;My first paragraph.&#60;/p&#62;
+          </p>
+          <br>
+          <p>
+            Note: Some HTML elements have no content (like the &#60;br&#62; element). These elements are called empty elements. Empty elements do not have an end tag!
+          </p>
+        </article>
+      </section>
+      <br>
+      <section class="main-section" id="HTML_Attributes">
+        <header>HTML Attributes</header>
+        <article>
+        <p>
+          HTML attributes provide additional information about HTML elements.
+        </p>
+        <br>
+        <h1>HTML Attributes</h1>
+        <ul>
+          <li>All HTML elements can have <strong>attributes</strong></li>
+          <li>Attributes provide <strong>additional information</strong> about elements</li>
+          <li>Attributes are always specified in <strong>the start tag</strong></li>
+          <li>Attributes usually come in name/value pairs like: <strong>name="value"</strong></li>
+        </ul>
+        <br>
+        <h1>
+          The href Attribute
+        </h1>
+        <p>
+          The &#60;a&#62; tag defines a hyperlink. The href attribute specifies the URL of the page the link goes to:
+        </p>
+        <code>&#60;<span class="element">a</span> <span class="sub-element">href</span>=<span class="value">"https://www.myrepository.github.com.io"</span> &#62;My repository link.&#60;<span class="element">/a</span>&#62; 
+        </code>
+        <br>
+        <h1>
+          The src Attribute
+        </h1>
+        <p>
+          The &#60;img&#62; tag is used to embed an image in an HTML page. The src attribute specifies the path to the image to be displayed:
+        </p>
+        <code>&#60;<span class="element">img</span> <span class="sub-element">src</span>=<span class="value">"img_girl.jpg"</span>&#62;
+        </code>
+        <p>
+          There are two ways to specify the URL in the src attribute:
+        </p>
+        <p>
+          <strong>1. Absolute URL</strong> - Links to an external image that is hosted on another website. Example: src="https://www.w3schools.com/images/img_girl.jpg".
+        </p>
+        <p>
+          <strong>Notes:</strong> External images might be under copyright. If you do not get permission to use it, you may be in violation of copyright laws. In addition, you cannot control external images; it can suddenly be removed or changed.
+        </p>
+        <p>
+          2. Relative URL - Links to an image that is hosted within the website. Here, the URL does not include the domain name. If the URL begins without a slash, it will be relative to the current page. Example: src="img_girl.jpg". If the URL begins with a slash, it will be relative to the domain. Example: <strong>src="/images/img_girl.jpg".</strong>
+        </p>
+        <p>
+          <strong>Tip:</strong> It is almost always best to use relative URLs. They will not break if you change domain.
+        </p>
+        <br>
+        <h1>
+          The width and height Attributes
+        </h1>
+        <p>
+          The &#60;img&#62; tag should also contain the width and height attributes, which specify the width and height of the image (in pixels):
+        </p>
+        <code>&#60;<span class="element">img</span> <span class="sub-element">src</span>=<span class="value">"img_girl.jpg"</span> <span class="sub-element">width</span>=<span class="value">"104"</span> <span class="sub-element">height</span>=<span class="value">"142"</span>&#62;
+        </code>
+        <br>
+        <h1>
+          The alt Attribute
+        </h1>
+        <p>
+          The required alt attribute for the &#60;img&#62; tag specifies an alternate text for an image, if the image for some reason cannot be displayed. This can be due to a slow connection, or an error in the src attribute, or if the user uses a screen reader.
+        </p>
+        <code>&#60;<span class="element">img</span> <span class="sub-element">src</span>=<span class="value">"img_girl.jpg"</span> <span class="sub-element">alt</span>=<span class="value">"beautiful girl"</span>&#62;
+        </code>
+        <code>&#60;<span class="element">img</span> <span class="sub-element">src</span>=<span class="value">"mexico.jpg"</span> <span class="sub-element">alt</span>=<span class="value">"cowboy"</span>&#62;
+        </code>
+        <br>
+        <h1>
+          The style Attribute
+        </h1>
+        <p>
+          The style attribute is used to add styles to an element, such as color, font, size, and more.
+        </p>
+        <code>&#60;<span class="element">p</span> <span class="sub-element">style</span>=<span class="value">"color:red;"</span>&#62;This is a red paragraph.&#60;<span class="element">/p</span>&#62;
+        </code>
+        </article>
+      </section>
+      <br>
+      <section class="main-section" id="HTML_Styles">
+        <header>HTML Styles</header>
+        <article>
+          The HTML style attribute is used to add styles to an element, such as color, font, size, and more.
+          <code><p>I am normal</p><p style="color:red;">I am red</p><p style="color:blue;">I am blue</p><p style="font-size:25px;">I am medium</p></code>
+          <br>
+          <h1>
+            he HTML Style Attribute
+          </h1>
+          <p>
+            Setting the style of an HTML element, can be done with the style attribute.
+          </p>
+          <p>
+            The HTML style attribute has the following syntax:
+          </p>
+          <code> &#60;<span class="element">tagname</span> <span class="sub-element">style</span>=<span class="value">"property:value;"</span>&#62;</code>
+          <br>
+          <h1>
+            Background Color
+          </h1>
+          <p>
+            The CSS background-color property defines the background color for an HTML element.
+          </p>
+          <code>&#60;<span class="element">body</span> <span class="sub-element">style</span>=<span class="value">"background-color:powderblue;"</span>&#62;
+            <p>or</p>&#60;<span class="element">h1</span> <span class="sub-element">style</span>=<span class="value">"background-color:powderblue;"</span>&#62;This is a heading&#60;<span class="element">/h</span>1&#62;
+            &#60;<span class="element">p</span> <span class="sub-element">style</span>=<span class="value">"background-color:tomato;"</span>&#62;This is a paragraph.&#60;<span class="element">/p</span>&#62;
+          </code>
+          <br>
+          <h1>
+            Text Color
+          </h1>
+          <p>
+            The CSS color property defines the text color for an HTML element:
+          </p>
+          <code>&#60;<span class="element">h1</span> <span class="sub-element">style</span>=<span class="value">"color:powderblue;"</span>&#62;This is a heading&#60;<span class="element">/h</span>1&#62;
+            &#60;<span class="element">p</span> <span class="sub-element">style</span>=<span class="value">"color:red;"</span>&#62;This is a paragraph.&#60;<span class="element">/p</span>&#62;</code>
+            <br>
+            <h1>
+              Fonts
+            </h1>
+            <p>
+              The CSS font-family property defines the font to be used for an HTML element:
+            </p>
+            <code>&#60;<span class="element">h1</span> <span class="sub-element">style</span>=<span class="value">"font-family:verdana;"</span>&#62;This is a heading&#60;<span class="element">/h</span>1&#62;
+            &#60;<span class="element">p</span> <span class="sub-element">style</span>=<span class="value">"font-family:courier;"</span>&#62;This is a paragraph.&#60;<span class="element">/p</span>&#62;</code>
+            <br>
+            <h1>
+              Text Size
+            </h1>
+            <p>
+              The CSS font-size property defines the text size for an HTML element:
+            </p>
+            <code>&#60;<span class="element">h1</span> <span class="sub-element">style</span>=<span class="value">"font-size:300%;"</span>&#62;This is a heading&#60;<span class="element">/h</span>1&#62;
+            &#60;<span class="element">p</span> <span class="sub-element">style</span>=<span class="value">"font-size:160%;"</span>&#62;This is a paragraph.&#60;<span class="element">/p</span>&#62;</code>
+            <br>
+            <h1>
+              Text Alignment
+            </h1>
+            <p>
+              The CSS text-align property defines the horizontal text alignment for an HTML element:
+            </p>
+            <code>&#60;<span class="element">h1</span> <span class="sub-element">style</span>=<span class="value">"text-align:center;"</span>&#62;This is a heading&#60;<span class="element">/h</span>1&#62;
+            &#60;<span class="element">p</span> <span class="sub-element">style</span>=<span class="value">"text-align:center;"</span>&#62;This is a paragraph.c<span class="element">/p</span>&#62;</code>
+        </article>
+      </section>
+      <br>
+      <section class="main-section" id="HTML_Colors">
+        <header>HTML Colors</header>
+        <article>
+          HTML colors are specified with predefined color names, or with RGB, HEX, HSL, RGBA, or HSLA values.
+          <br>
+          <h1>
+            Color Names
+          </h1>
+          <p>
+            In HTML, a color can be specified by using a color name:
+          </p>
+          <ul>
+            <li>blue</li>
+            <li>tomato</li>
+            <li>orange</li>
+            <li>black</li>
+            <li>grey</li>
+            <li>white</li>
+            <li>violet</li>
+            <li>red</li>
+            <li>pink</li>
+            <li>green</li>
+          </ul>
+          <br>
+          <h1>
+            Background Color
+          </h1>
+          <p>
+            You can set the background color for HTML elements:
+          </p>
+          <br>
+          <h1>
+            Text Color
+          </h1>
+          <p>
+            You can set the color of text:
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="HTML_Comments">
+        <header>HTML Comments</header>
+        <article>
+          HTML comments are not displayed in the browser, but they can help document your HTML source code.
+          <br>
+          <h1>
+            HTML Comment Tag
+          </h1>
+          <p>
+            You can add comments to your HTML source by using the following syntax:
+          </p>
+          <code><span class="comment">&#60;!-- Write your comments here --&#62;</span></code>
+          <p>
+            Notice that there is an exclamation point (!) in the start tag, but not in the end tag.
+          </p>
+          <p>
+            <strong>Note:</strong> Comments are not displayed by the browser, but they can help document your HTML source code.
+          </p>
+        </article>
+      </section>
+      <br>
+      <section class="main-section" id="HTML_class_Attribute">
+        <header>HTML class Attribute</header>
+        <article>
+          <p>
+            The HTML class attribute is used to specify a class for an HTML element.
+          </p>
+          <p>
+            Multiple HTML elements can share the same class.
+          </p>
+
+          <h1>
+            Using The class Attribute
+          </h1>
+          <p>
+            The class attribute is often used to point to a class name in a style sheet. It can also be used by a JavaScript to access and manipulate elements with the specific class name.
+          </p>
+
+          <p>
+            In the following example we have three &#60;div&#62; elements with a class attribute with the value of "city". All of the three &#60;div&#62; elements will be styled equally according to the .city style definition in the head section:
+          </p>
+          <br>
+          <h1>
+            The Syntax For Class
+          </h1>
+          <p>
+            To create a class; write a period (.) character, followed by a class name. Then, define the CSS properties within curly braces {}:
+          </p>
+
+          <br>
+          <h1>
+            Multiple Classes
+          </h1>
+          <p>HTML elements can belong to more than one class.</p>
+          <p>To define multiple classes, separate the class names with a space, e.g. &#60;div class="city main"&#62;. The element will be styled according to all the classes specified.</p>
+          <p>In the following example, the first &#60;h2&#62; element belongs to both the city class and also to the main class, and will get the CSS styles from both of the classes: </p>
+        </article>
+      </section>
+      <section class="main-section" id="HTML_id_Attribute">
+        <header>HTML id Attribute</header>
+        <article>
+          <p>The HTML id attribute is used to specify a unique id for an HTML element.</p>
+          <p>
+            You cannot have more than one element with the same id in an HTML document.
+          </p>
+          <br>
+          <h1>
+            Using The id Attribute
+          </h1>
+          <p>The id attribute specifies a unique id for an HTML element. The value of the id attribute must be unique within the HTML document.</p>
+          <p>The id attribute is used to point to a specific style declaration in a style sheet. It is also used by JavaScript to access and manipulate the element with the specific id.</p>
+          <p>The syntax for id is: write a hash character (#), followed by an id name. Then, define the CSS properties within curly braces {}.</p>
+          <p>In the following example we have an &#60;h1&#62; element that points to the id name "myHeader". This &#60;h1&#62; element will be styled according to the #myHeader style definition in the head section:</p>
+          <br>
+          <h1>
+            Difference Between Class and ID
+          </h1>
+          <p>
+            Difference Between Class and ID
+          </p>
+          <br>
+          <h1>
+            HTML Bookmarks with ID and Links
+          </h1>
+          <p>HTML bookmarks are used to allow readers to jump to specific parts of a webpage.</p>
+          <p>Bookmarks can be useful if your page is very long.</p>
+          <p>To use a bookmark, you must first create it, and then add a link to it.</p>
+          <p>Then, when the link is clicked, the page will scroll to the location with the bookmark.</p>
+        </article>
+      </section>
+      <br>
+      <section class="main-section" id="HTML_CSS">
+        <header>HTML CSS</header>
+        <article>
+          
+        </article>
+      </section>
+      <section class="main-section" id="HTML_JavaScript">
+        <header>HTML JavaScript</header>
+        <article>
+          
+        </article>
+      </section>
+      <section class="main-section" id="HTML_Versus_XHTML">
+        <header>HTML Versus XHTML</header>
+        <article>
+          
+        </article>
+      </section>
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <article>
+          <ul>
+            <li>
+              All the documentation in this page is taken from
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                target="_blank"
+                >MDN</a
+              >
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
