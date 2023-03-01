@@ -1,0 +1,19 @@
+:root {
+	--str--light: #e9e9e9;
+	--str--gray: #737373;
+	--str--mid-gray: #bababa;
+	--str--low-dark: #505050;
+	--str--mid-dark: #464646;
+	--str--dark: #262626;
+	--str--darker: #181818;
+	--str--glow-blues: linear-gradient(135deg, #009FFD, #2A2A72 60%); /*bugged*/
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-weight: bolder;
+	font-size: 20px;
+	user-select: none;
+	background-repeat: no-repeat;
+
+}
