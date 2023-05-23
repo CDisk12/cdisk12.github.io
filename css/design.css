@@ -1,0 +1,358 @@
+/*Root Directory*/
+
+:root {
+	--lwc: #ebebeb;
+	--ldc: #3a3a3a;
+	--lgc: #4d4d4d;
+	--ddc: #252525;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap');
+
+* {
+	font-size: 14px;
+	font-family: 'Roboto', 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+	color: var(--lwc);
+}
+
+body {
+	background-color: var(--lwc);
+	min-height: 100vh;
+	cursor: auto;
+	user-select: none;
+}
+
+/*Upper navigation*/
+
+header {
+	position: sticky;
+	padding: 30px 0 0 20px;
+	top: 0;
+	width: 98.7%;
+	background-color: var(--ddc);
+	z-index: 5;
+}
+
+div.main {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav.nav li {
+	padding: 5px 0  0 10px;
+	border: none;
+	display: inline-block;
+}
+
+ul.collosal {
+	display: flex;
+	font-weight: bolder;
+	padding: 20px 0 2px 15px;
+	margin: 0 25px 0 0;
+}
+
+li.link > a:hover {
+	background-color: transparent;
+	text-shadow: 0 0 5px #000, 0 0 10px #003349, 0 0 15px #057db0, 0 0 20px #00a7ef;
+	transition: ease-in-out 0.2s;
+	animation: bot-selector-blink .5s step-end infinite;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+@keyframes bot-selector-blink {
+	from, to {
+		border-bottom: transparent;
+	}
+	50% {
+		border-bottom: 3px solid var(--lunlb);
+	}
+}
+
+li.link {
+	list-style: none;
+}
+
+li.link > a {
+	padding: 5px;
+	font-size: 20px;
+	text-decoration: none;
+	transition: font-size .4s;
+}
+
+h1.logo {
+	font-size: 50px;
+}
+
+li.active {
+	background-color: transparent;
+	text-shadow: 0 0 5px #000, 0 0 10px #003349, 0 0 15px #057db0, 0 0 20px #00a7ef;
+	transition: ease-in-out 0.2s;
+	animation: bot-selector-blink .5s step-end infinite;
+}
+
+/*Upper Items*/
+
+section.quote {
+	background-color: transparent;
+	display: flex;
+	flex: column;
+	justify-content: space-evenly;
+	margin-top: 20px;
+}
+
+div.details {
+	background-color: var(--ldc);
+	height: 60%;
+	max-height: 185px;
+	width: 30%;
+	padding: 75px;
+	border: 3px solid var(--lgc);
+	border-radius: 20px;
+	animation: shadow 5s ease-in-out infinite alternate;
+	align-self: center;
+}
+
+@keyframes shadow{
+	from {
+		box-shadow: 15px 15px 30px 10px var(--lgc);
+	}
+	to {
+		box-shadow: -15px 15px 30px 10px var(--lgc);
+	}
+}
+
+.tabsp {
+	display: inline-block;
+	margin-left: 40px;
+}
+
+img.integrated {
+	width: 21%;
+	height: 50%;
+	border: 5px solid var(--lgc);
+	border-radius: 50%;
+	margin-top: 8px;
+	animation: shadow 5s ease-in-out infinite alternate;
+}
+
+h2.greetings {
+	letter-spacing: 1.2px;
+	animation: linear-animation-text 5s infinite alternate;
+}
+
+@keyframes linear-animation-text {
+	0% {color:#dc143c;}
+	10% {color:#b22222;}
+	20% {color:#9932cc;}
+	30% {color:#8a2be2;}
+	40% {color:#0000cd;}
+	50% {color:#000080;}
+	60% {color:#48d1cc;}
+	70% {color:#1f90ff;}
+	80% {color:#7fff00;}
+	90% {color:#adff2f;}
+	100% {color:#ffd700;}
+}
+
+/*First Objective*/
+
+div.container {
+	background-color: var(--lgc);
+	margin: 2% 5px 2% 5px;
+	border-radius: 30px;
+	padding: 10px;
+}
+
+h2.work-titles {
+	text-align: right;
+	margin: 5px 30px 0 0;
+	font-size: 20px;
+}
+
+div.fCi {
+	background-color: transparent;
+	height: 40%;
+	display: flex;
+	overflow: hidden;
+	padding: 0 25px 0 20px;
+}
+
+div.web-obj {
+	background-color: var(--ldc);
+	height: 30%;
+	margin: 0 10px 0 10px;
+	padding: 5%;
+	align-self: center;
+	border-radius: 5%;
+}
+
+@keyframes web-obj-hover-ani {
+	from {
+		box-shadow: 0 0 5px 5px var(--ldc), 0 0 10px 10px var(--lgc);
+	}
+	to {
+		box-shadow: 0 0 5px 5px var(--ldc), 0 0 10px 10px var(--lgc), 0 0 15px 15px #444;
+	}
+}
+
+@keyframes web-obj-hover-text {
+	from {
+		color: skyblue;
+		transition: color 0.3s ease-out;
+	}
+	to {
+		color: var(--lunlb);
+	}
+}
+
+div.web-obj:hover {
+	animation: 
+		web-obj-hover-ani 5s ease-in-out infinite alternate,
+		web-obj-hover-text 1s ease-in-out infinite alternate;
+}
+
+h2.info-title {
+	margin: 0 5px 0 5px;
+	font-size: 18px;
+}
+
+p.info-details {
+	margin: 5px 15px 0 15px;
+	font-size: 15px;
+	padding: 5px 0 15px 0;
+}
+
+/*Second Objectives*/
+
+section.social {
+	height: 30%;
+	width: 100%;
+	background-color: var(--ldc);
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: space-evenly;
+}
+
+a.media {
+	height: 95%;
+	width: 15%;
+	background-color: var(--lgc);
+	border: 1px black;
+	border-style: solid dashed solid dashed;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+div.social > a {
+	text-decoration: none;
+}
+/*Third Objectives*/
+
+section.contacts {
+	height: 50%;
+	width: 100%;
+	background-color: var(--lgc);
+	display: flex;
+	flex-direction: center;
+	justify-content: space-between;
+}
+
+div.contact {
+	height: 100%;
+	width: 35%;
+	background-color: var(--ldc);
+	border: 2px black;
+	border-style: none dashed solid dashed;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+div.contact > img.profile {
+	width: 40%;
+	height: 52.5%;
+	border-radius: 50%;
+	align-self: center;
+	margin-bottom: 5%;
+	animation: glowing 5s ease-in-out infinite alternate;
+	background-color: white;
+}
+
+div.contact > img.icon {
+	width: 40%;
+	height: 52.5%;
+	align-self: center;
+	margin-bottom: 5%;
+	background-color: transparent;
+}
+
+div.contact > a {
+	text-decoration: none;
+}
+
+div.contact > span.visible {
+	visibility: hidden;
+}
+
+.links {
+  position: relative;
+  display: inline-block;
+}
+
+.links .tip {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.links .tip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.links:hover .tip {
+  visibility: visible;
+  opacity: 1;
+}
+
+@keyframes glowing {
+	from {box-shadow: 0 0 10px 1px #fff;}
+	to {box-shadow: 0 0 25px 7px #fff;}
+}
+
+/*Footer*/
+
+div.footer {
+	background-color: var(--ldc);
+	text-align: center;
+	position: sticky;
+	top: 100%;
+	padding: 50px 0 20px 0;
+	border-top: 3px solid black;
+}
