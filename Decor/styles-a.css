@@ -298,7 +298,7 @@ Laptop L Resolution
 	#selection {
 		margin: 0 0 0 18%;
 	}
-	iframe {
+	iframe, video {
 		height: 256px;
 		border-radius: 25px;
 	}
