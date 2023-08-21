@@ -100,7 +100,7 @@ All Mobile Width Resolution
 	}
 	#selection {
 	}
-	iframe {
+	iframe, video {
 		height: 160px;
 		border-radius: 25px;
 	}
@@ -163,7 +163,7 @@ For Tablet Resolution
 	}
 	#selection {
 	}
-	iframe {
+	iframe, video {
 		height: 192px;
 		border-radius: 25px;
 	}
@@ -230,7 +230,7 @@ Laptop Resolution
 	#selection {
 		margin: 0 0 0 19.5%;
 	}
-	iframe {
+	iframe, video {
 		height: 256px;
 		border-radius: 25px;
 	}
@@ -414,7 +414,7 @@ High Resolution
 		margin: 0.91% 0 0 19%;
 		width: 2560px;
 	}
-	iframe {
+	iframe, video {
 		height: 384px;
 		width: 448px;
 		border-radius: 25px;
