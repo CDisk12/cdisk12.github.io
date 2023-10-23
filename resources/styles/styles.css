@@ -20,7 +20,7 @@ body {
 
 @media (min-width: 300px) and (max-width: 500px)  {
     body {
-        font-size: 10px;
+        font-size: 13px;
     }
 }
 
@@ -174,6 +174,7 @@ Main structure
     width: 100%;
     padding: 10px 0 0 0 ;
     border-bottom: 0.2px solid grey;
+    z-index: 5;
 }
 
 @media (min-width: 426px) and (max-width: 1920px) {
@@ -192,9 +193,14 @@ Main structure
     }
     .contents {
         margin: 50px 0 0 0 ;
+        padding: 20px 0 0 0;
     }
     .content-container {
         gap: 50px;
+    }
+    .hw1 {
+        width:256px;
+        height:256px;
     }
 }
 
@@ -215,6 +221,13 @@ Main structure
         display: flex;
         justify-content: center;
         width: 100%;
+    }
+    .contents {
+        padding: 50px 0 0 0;
+    }
+    .hw1 {
+        width:128px;
+        height:128px;
     }
 }
 
@@ -239,7 +252,6 @@ Inner Structure
 .contents {
     height: 95%;
     width: 60%;
-    padding: 20px;
 }
 
 .contexts {
@@ -255,6 +267,10 @@ Inner Structure
     display: flex;
     gap: 100px;
 }
+
+/*
+Text-Style NV Colored
+*/
 
 .nv1 {
     font-size: 18px;
@@ -276,18 +292,53 @@ Inner Structure
     margin: 0;
 }
 
-.nv6 {
-    font-size: 20px;
+/*
+Text-Style BY Non-colored
+*/
+
+.by1 {
+    font-size: 18px;
     font-weight: bolder;
-    transform: translateY(-25px);
 }
 
-.nv7 {
-    font-size: 18px;
-    color: darkgray;
-    font-weight: bolder;
-    transform: translateY(-30px);
+.by2 {
+    color: black;
 }
+
+
+@media (min-width: 426px) and (max-width: 1920px) {
+    .nv6 {
+        font-size: 20px;
+        font-weight: bolder;
+        transform: translateY(-25px);
+    }
+    
+    .nv7 {
+        font-size: 18px;
+        color: darkgray;
+        font-weight: bolder;
+        transform: translateY(-30px);
+    }
+}
+
+@media (min-width: 300px) and (max-width: 500px) {
+    .nv6 {
+        font-size: 16px;
+        font-weight: bolder;
+        transform: translateY(-25px);
+    }
+    
+    .nv7 {
+        font-size: 14px;
+        color: darkgray;
+        font-weight: bolder;
+        transform: translateY(-30px);
+    }
+    .content-container {
+        gap: 50px;
+    }
+}
+
 
 
 
@@ -339,7 +390,7 @@ Inner Structure
     align-items: center;
 }
 
-@media (min-width: 426px) and (max-width: 1920px){
+@media (min-width: 426px) and (max-width: 1920px) {
 
     .new-container-2 {
         display: grid;
@@ -473,20 +524,38 @@ Inner Structure
         grid-column-end: 4;
     }}
 
-
-.content-container::before {
-    content: "";
-    background: linear-gradient(45deg, #e6fb04, #ff6600, 
-            #00ff66, #00ffff, #ff00ff, #ff0099, #6e0dd0, 
-            #ff3300, #099fff);
-    position: absolute;
-    border-radius: 50px;
-    background-size: 200%;
-    transform: translate(65px, -3px);
-    padding: 0.2px 0;
-    height: 43%;
-    width: 0.2%;
+@media (min-width: 426px) and (max-width: 1920px) {
+    .content-container::before {
+        content: "";
+        background: linear-gradient(45deg, #e6fb04, #ff6600, 
+                #00ff66, #00ffff, #ff00ff, #ff0099, #6e0dd0, 
+                #ff3300, #099fff);
+        position: absolute;
+        border-radius: 50px;
+        background-size: 200%;
+        transform: translate(65px, -3px);
+        padding: 0.2px 0;
+        height: 43%;
+        width: 0.2%;
+    }
 }
+
+@media (min-width: 300px) and (max-width: 500px) {
+    .content-container::before {
+        content: "";
+        background: linear-gradient(45deg, #e6fb04, #ff6600, 
+                #00ff66, #00ffff, #ff00ff, #ff0099, #6e0dd0, 
+                #ff3300, #099fff);
+        position: absolute;
+        border-radius: 50px;
+        background-size: 200%;
+        transform: translate(20px, -3px);
+        padding: 0.2px 0;
+        height: 33%;
+        width: 0.2%;
+    }
+}
+
 
 /*
 Animation
