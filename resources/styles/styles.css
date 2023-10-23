@@ -68,13 +68,6 @@ universal section
 */
 
 
-@media (min-width: 300px) and (max-width: 500px) {
-    .ku1 {
-        width: 100%;
-    }
-}
-
-
 .vt2 {
     list-style: none;
     display: flex;
@@ -282,6 +275,11 @@ Only can be found in the developer page of the landing page
 }
 
 
+@media (min-width: 300px) and (max-width: 500px) {
+    .ku1 {
+        width: 100%;
+    }
+}
 
 
 /*
