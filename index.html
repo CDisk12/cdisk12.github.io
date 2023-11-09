@@ -3,166 +3,106 @@
 <html lang="en">
     <head>
 
-
-        <meta name="keywords" content="Friendly Pet Web">
-        <meta name="description" content="Make your pet safe scan now!!">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>PawPatRoll</title>
+        <title>Pet Profile</title>
+
+        <script src="js/script.js"></script>
 
 
         <link rel="stylesheet" href="style/styles.css">
     </head>
     <body>
-        
-        <div class="content">
+        <div class="navigation">
+            <div class="logo">
+                <img src="https://animalcare.baguio.gov.ph/assets/baguioseal-676e0ef7.png" alt="logo">
+                <div class="nv1">eGov:Baguio | Animal Care</div>
+            </div>
 
-            <div class="container">
-                <div class="registration-title">Powered by PawPatRoll</div>
-                <div class="gy1">Pet Intake & Client Registration Form</div>
+            <a href="https://animalcare.baguio.gov.ph/" target="_blank"><div class="ny1">Home</div></a>
+            <a href="https://animalcare.baguio.gov.ph/impound" target="_blank"><div class="ny1">Impound</div></a>
+            <a href="https://animalcare.baguio.gov.ph/adoption" target="_blank"><div class="ny1">Adoption</div></a>
+            <a href="https://animalcare.baguio.gov.ph/vaccination" target="_blank"><div class="ny1">Vaccination</div></a>
+            <a href="https://animalcare.baguio.gov.ph/contact" target="_blank"><div class="ny1">Contact Us</div></a>
+            <a href="https://animalcare.baguio.gov.ph/pets" target="_blank"><div class="ny1">My Pets</div></a>
+            <a href="https://animalcare.baguio.gov.ph/claiming/" target="_blank"><div class="ny1">Claim my pet</div></a>
+        </div>
 
-                <div class="header">
-                    <div class="header-title">Baguio City Veterinary Office</div>
-                    <div class="address">CHCV+5M7, Slaughterhouse Rd, Baguio, Benguet</div>
-                    <div class="about">(074) 443 5332 | cityvet_baguio@yahoo.com</div>
+        <div class="container">
+            <div class="banner"></div>
+            <div class="pet-icon">
+                <div class="pet-img">
+                    <img src="https://animalcare.baguio.gov.ph/api/image/md/eqRMQNRb" alt="">
+                </div>
+            </div>
+
+            <div class="selection">
+                <div class="select">
+                    <a id="inf" onclick="inf()" href="#information" class="active"><div class="item">Information</div></a>
+                    <a id="img" onclick="img()" href="#images"><div class="item">Images</div></a>
+                    <a id="imp" onclick="imp()" href="#impound"><div class="item">Impound history</div></a>
+                    <a id="vac" onclick="vac()" href="#vaccination"><div class="item">Vaccination History</div></a>
                 </div>
 
-                <div class="space"></div>
 
-
-                <form method="post" class="new-container">
-                    <div class="nv1">Clients Information</div>
-                        
-                    <input type="text" name="name" placeholder="name">
-                    <input type="number" name="number" placeholder="(123) 456 7890">
-                    <input type="email" name="email" id="email" placeholder="client@email.com">
-
-                    <input type="text" name="address" placeholder="Address">
-                    <input type="text" name="city" placeholder="City">
-                    <input type="text" name="state" placeholder="State/Province">
-                    <input type="number" name="zip" placeholder="ZIP/POSTAL Code">
-
-                    <input type="text" name="name2" placeholder="Secondary Owner">
-                    <input type="number" name="number2" placeholder="(123) 456 7890">
-                    <div class="container-box">
-                        <div class="nv2">Are any other people allowed to pick up your pet?</div>
-                        <input type="text" name="is">
-                    </div>
-
-                    <div class="container-box">
-                        <div class="nv2">How did you find about us?</div>
-                        <input type="text" name="is2">
-                    </div>
-
-                    <div class="space"></div>
-
-                        
-                    <div class="nv1">Pet Information</div>
-
-                    <input type="text" name="petname" placeholder="Pet Name">
-                    <input type="text" name="breed" placeholder="Breed">
-
-                    <div class="container-box">
-                        <div class="nv2">Gender</div>
-                        <input type="radio" name="male" id="male"><label for="male">Male</label>
-                        <input type="radio" name="female" id="female"><label for="female">Female</label>
-                    </div>
-
-                    <div class="container-box">
-                        <div class="nv2">Fixed(Y/N)</div>
-                        <input type="radio" name="yes" id="yes"><label for="yes">Y</label>
-                        <input type="radio" name="no" id="no"><label for="no">N</label>
-                    </div>
-
-
-                    <div class="container-box">
-                        <div class="nv2">Veterinary Office:
-                            <select name="office" id="office">
-                                <option value="bc-vt">Baguio City Veterinary Office</option>
-                            </select>
+                <div class="embed">
+                    <div id="information">
+                        <div>
+                            <div>ID:</div>
+                            <div>M5654C7CE118CF8</div>
+                        </div>
+                        <div>
+                            <div>Name:</div>
+                            <div>Inubas</div>
+                        </div>
+                        <div>
+                            <div>Sex:</div>
+                            <div>Unspecified</div>
+                        </div>
+                        <div>
+                            <div>Birthdate</div>
+                            <div>10-10-2010</div>
+                        </div>
+                        <div>
+                            <div>Color:</div>
+                            <div>Blue</div>
+                        </div>
+                        <div>
+                            <div>Neutered:</div>
+                            <div>No</div>
+                        </div>
+                        <div>
+                            <div>Breed:</div>
+                            <div>Askal</div>
+                        </div>
+                        <div>
+                            <div>Description:</div>
+                            <div>Wild Dog</div>
                         </div>
                     </div>
 
-                    <input type="text" name="id" maxlength="12" placeholder="Registration-ID">
-                    <input type="number" name="weight" placeholder="Weight">
-                    <input type="text" name="color" placeholder="Color">
-                    <input type="number" name="DOB" placeholder="Date of Birth">
 
-
-
-                        
-                    <div class="container-box">
-                        <div class="nv2">Does your pet have an insurance policy? If so. Please detail.</div>
-                        <input type="radio" name="yes" id="yes2"><label for="yes2">Y</label>
-                        <input type="radio" name="no" id="no2"><label for="no2">N</label>
-                    </div>
-
-                        
-
-                    <div class="container-box">
-                        <div class="nv2">Feeding & Medication Instructions:</div>
-                        <input type="text" name="is3">
-                    </div>
-
-                        
-                    <div class="container-box">
-                        <div class="nv2">Does your pet have any food allergies? If so. Please detail.</div>
-                        <input type="text" name="is4">
-                    </div>
-
-                        
-                    <div class="container-box">
-                        <div class="nv2">Food aggression issues? If so. Please detail.</div>
-                        <input type="text" name="is5">
-                    </div>
-
-
-                        
-                    <div class="container-box">
-                        <div class="nv2">Aggression issues with other animals? If so. Please detail.</div>
-                        <input type="text" name="is6">
-                    </div>
-                        
-                    <div class="container-box">
-                        <div class="nv2">Behavior or temperament issues? If so. Please detail.</div>
-                        <input type="text" name="is7">
-                    </div>
-
-                        
-                    <div class="container-box">
-                        <div class="nv2">Any thing else you'd like us to know?</div>
-                        <input type="text" name="is8">
-                    </div>
-
-                    <div class="space"></div>
-
-
-                    <div class="nv1">Required Vaccines (Please Attach Copy or Email to cityvet_baguio@yahoo.com)</div>
-                    <div class="container-box">
-                        <div class="nv2">
-                            Rabies | Expiration Date
-                            <input type="date" name="rabies">
+                    <div id="images">
+                        <div class="image">
+                            <img src="https://animalcare.baguio.gov.ph/api/image/md/eqRMQNRb" alt="dog">
+                            <span>11/09/2023</span>
                         </div>
-                            
-                    </div>
 
-                    <div class="container-box">
-                        <div class="nv2">
-                            DDP | Expiration Date
-                            <input type="date" name="ddp">
+                        <div class="image">
+                            <div class="item">&#43;</div>
                         </div>
-                            
                     </div>
 
-                    <div class="container-box">
-                        <div class="nv2">
-                            Rabies | Expiration Date
-                            <input type="date" name="rabies2">
-                        </div>
-                            
+
+                    <div id="impound">
+                        <span>none</span>
                     </div>
 
-                </form method="post">
+
+                    <div id="vaccination">
+                        <span>none</span>
+                    </div>
+                </div>
             </div>
         </div>
 
