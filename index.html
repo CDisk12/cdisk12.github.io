@@ -7,10 +7,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Pet Profile</title>
 
-        <script src="js/script.js"></script>
-
-
-        <link rel="stylesheet" href="style/styles.css">
     </head>
     <body>
         <div class="navigation">
@@ -38,10 +34,10 @@
 
             <div class="selection">
                 <div class="select">
-                    <a id="inf" onclick="inf()" href="#information" class="active"><div class="item">Information</div></a>
-                    <a id="img" onclick="img()" href="#images"><div class="item">Images</div></a>
-                    <a id="imp" onclick="imp()" href="#impound"><div class="item">Impound history</div></a>
-                    <a id="vac" onclick="vac()" href="#vaccination"><div class="item">Vaccination History</div></a>
+                    <a id="inf" onclick="inf()" class="active"><div class="item">Information</div></a>
+                    <a id="img" onclick="img()" ><div class="item">Images</div></a>
+                    <a id="imp" onclick="imp()" ><div class="item">Impound history</div></a>
+                    <a id="vac" onclick="vac()" ><div class="item">Vaccination History</div></a>
                 </div>
 
 
@@ -108,3 +104,254 @@
 
     </body>
 </html>
+
+
+<style>
+    body {
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.navigation > .logo > img {
+    width: 64px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    position: fixed;
+    width: 100%;
+
+    background-color: white;
+    z-index: 1;
+
+    border-bottom: 2px solid skyblue;
+    box-shadow: 0 0 5px 5px skyblue;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo > .nv1 {
+    font-size: 22px;
+}
+
+.ny1 {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: rgb(48, 48, 48);
+}
+
+.container {
+    height: 100%;
+    width: 60%;
+    margin: 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner {
+    background: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: brown;
+
+    border-radius: 25px 25px 0 0;
+
+    padding: 96px 0;
+}
+
+.pet-icon {
+    background-color: red;
+}
+
+.pet-icon > .pet-img {
+    display: flex;
+    justify-content: center;
+}
+
+.pet-img > img {
+    width: 256px;
+    border-radius: 50%;
+    transform: translate(0, -128px);
+}
+
+.select {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: red;
+}
+
+.select > a > .item {
+    font-weight: 400;
+    font-size: 16px;
+
+    padding: 5px;
+}
+
+.embed {
+    height: 720px;
+    background-color: burlywood;
+    border-radius: 0 0 25px 25px;
+}
+
+.embed > #information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#information, #images, #impound, #vaccination {
+    padding: 25px;
+    
+    border-bottom: 5px solid transparent;
+}
+
+#impound, #vaccination {
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+
+#information > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#images {
+    display: flex;
+    gap: 20px;
+    display: none;
+}
+
+.image > .item {
+    background-color: blanchedalmond;
+    padding: 96px 128px;
+
+    border-radius: 25px 25px 0 0;
+    font-size: 32px;
+
+    cursor: pointer;
+}
+
+#images > .image {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    background-color: blanchedalmond;
+    cursor: pointer;
+
+    border-radius: 25px;
+    padding: 0 0 10px 0;
+}
+
+.image > img {
+    border-radius: 25px 25px 0 0;
+}
+
+.active {
+    border-bottom: 5px solid skyblue;
+}
+
+.select > a:hover {
+    animation: select 200ms forwards;
+}
+
+.select > a {
+    cursor: pointer;
+}
+
+@keyframes select {
+    0% {
+        background: red;
+    }
+    25%{
+        background: linear-gradient(0deg, rgb(146, 0, 0) 25%, red 100%);
+    }
+    50% {
+        background: linear-gradient(0deg, rgb(146, 0, 0) 50%, red 100%);
+    }
+    75% {
+        background: linear-gradient(0deg, rgb(146, 0, 0) 75%, red 100%);
+    }
+    100% {
+        background: rgb(146, 0, 0);
+    }
+}
+</style>
+
+<script>
+    function inf() {
+    document.getElementById("inf").classList.add("active");
+
+    document.getElementById("img").classList.remove("active");
+    document.getElementById("imp").classList.remove("active");
+    document.getElementById("vac").classList.remove("active");
+
+    document.getElementById("information").style.display = 'flex';
+    
+    document.getElementById("images").style.display = 'none';
+    document.getElementById("impound").style.display = 'none';
+    document.getElementById("vaccination").style.display = 'none';
+}
+function img() {
+    document.getElementById("inf").classList.remove("active");
+
+    document.getElementById("img").classList.add("active");
+
+    document.getElementById("imp").classList.remove("active");
+    document.getElementById("vac").classList.remove("active");
+
+    document.getElementById("information").style.display = 'none';
+    
+    document.getElementById("images").style.display = 'flex';
+
+    document.getElementById("impound").style.display = 'none';
+    document.getElementById("vaccination").style.display = 'none';
+}
+function imp() {
+    document.getElementById("inf").classList.remove("active");
+    document.getElementById("img").classList.remove("active");
+
+    document.getElementById("imp").classList.add("active");
+
+    document.getElementById("vac").classList.remove("active");
+
+    document.getElementById("information").style.display = 'none';
+    document.getElementById("images").style.display = 'none';
+    
+    document.getElementById("impound").style.display = 'flex';
+
+    document.getElementById("vaccination").style.display = 'none';
+}
+function vac() {
+    document.getElementById("inf").classList.remove("active");
+    document.getElementById("img").classList.remove("active");
+    document.getElementById("imp").classList.remove("active");
+
+    document.getElementById("vac").classList.add("active");
+
+    document.getElementById("information").style.display = 'none';
+    document.getElementById("images").style.display = 'none';
+    document.getElementById("impound").style.display = 'none';
+
+    document.getElementById("vaccination").style.display = 'flex';
+}
+</script>
