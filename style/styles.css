@@ -66,6 +66,12 @@ a {
     padding: 96px 0;
 }
 
+@media (min-width:200px;) and (max-width:500px;) {
+    .banner {
+        width:100%;
+    }
+}
+
 .pet-icon {
     background-color: red;
 }
