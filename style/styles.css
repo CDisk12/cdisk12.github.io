@@ -56,7 +56,7 @@ a {
 }
 
 .banner {
-    background: url("bg.jpg");
+    content: url("bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: brown;
