@@ -9,6 +9,7 @@ body {
     max-height: 128px;
     height: 100%;
     border-bottom: 0.2px solid black;
+    transition: height 0.2s;
 }
 
 .portfolio_container ul {
