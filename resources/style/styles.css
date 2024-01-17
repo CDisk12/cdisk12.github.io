@@ -15,13 +15,17 @@ body {
     transition: height 0.2s;
 }
 
+.portfolio_header_container {
+    margin: 0 0 0 10px;
+}
+
 .portfolio_header_container .title {
-    font-size: 60pt;
+    font-size: 40pt;
     font-weight: 600;
 }
 
-.parallax_container {
-    background: url('resources/image/000001.jpg') no-repeat;
+.parallax_container .container {
+    background: url('../image/000001.jpg') no-repeat;
     background-position: center;
     background-size: cover;
 }
