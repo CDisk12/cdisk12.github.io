@@ -15,6 +15,9 @@ body {
 
 .portfolio_header_container {
     margin: 0 0 0 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .portfolio_header_container .title {
