@@ -23,7 +23,7 @@ body {
 }
 
 .parallax_container .container {
-    background: url('../image/000001.jpg') no-repeat;
+    background: url('../../image/000001.jpg') no-repeat;
     background-position: center;
     background-size: cover;
 }
