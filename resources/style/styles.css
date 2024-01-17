@@ -22,11 +22,16 @@ body {
     font-weight: 600;
 }
 
+.parallax_container {
+    overflow-y: hidden;
+}
+
 .parallax_container .container {
     background: url('resources/image/000001.jpg') no-repeat;
     background: url('../image/000001.jpg') no-repeat;
     background-position: center;
     background-size: cover;
+    padding: 30px;
 }
 
 .parallax_wrapper .parallax_container .container .title {
