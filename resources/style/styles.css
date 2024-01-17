@@ -31,12 +31,12 @@ body {
     background: url('../image/000001.jpg') no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 30px;
 }
 
 .parallax_wrapper .parallax_container .container .title {
     font-size 80px;
     font-weight: 700;
+    padding: 30px;
     text-align: center;
     color: rbga(ff, ff, ff, 0.8);
 }
