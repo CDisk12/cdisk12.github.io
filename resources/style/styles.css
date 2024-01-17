@@ -23,12 +23,13 @@ body {
 }
 
 .parallax_container .container {
+    background: url('resources/image/000001.jpg') no-repeat;
     background: url('../image/000001.jpg') no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-.container .title {
+.parallax_wrapper .parallax_container .container .title {
     font-size 80px;
     font-weight: 700;
     text-align: center;
