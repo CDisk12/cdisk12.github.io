@@ -34,9 +34,9 @@ body {
 }
 
 .parallax_wrapper .parallax_container .container .title {
-    font-size 80px;
+    font-size: 80px;
     font-weight: 700;
     padding: 30px;
     text-align: center;
-    color: rbga(ff, ff, ff, 0.8);
+    color: rbga(0, 0, 0, 0.8);
 }
