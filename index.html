@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio | Bernal</title>
+
+        <!-- BUILT-IN CSS -->
+        <link rel="stylesheet" href="assets/design/root_display.css">
+        <link rel="stylesheet" href="assets/design/body_background_display.css">
+        <link rel="stylesheet" href="assets/design/display.css">
+
+        <!-- ASSETS -->
+        <link rel="stylesheet" href="assets/design/display_home.css">
+
+        <!-- AUGMENTED UI -->
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/augmented-ui@2/augmented-ui.min.css">
+
+        <!-- FOOTER -->
+        <link rel="stylesheet" href="assets/design/footer.css">
+
+        <!-- <meta http-equiv="refresh" content="1"> -->
+    </head>
+    <body>
+        <!-- NAVBAR -->
+        <div id="navbar">
+            <h2 id="title">PortFolio DashBoard</h2>
+            <div id="item_container">
+                <div id="item_select">
+                    <input type="radio" name="item_select" id="Home" checked></input>
+                    <label id="item_wrapper" for="Home">Home</label>
+                </div>
+                <div id="item_select">
+                    <input type="radio" name="item_select" id="Project"></input>
+                    <label id="item_wrapper" for="Project">Projects</label>
+                </div>
+                <div id="item_select">
+                    <input type="radio" name="item_select" id="Relate"></input>
+                    <label id="item_wrapper" for="Relate">Related</label>
+                </div>
+                <span id="indicator"></span>
+            </div>
+        </div>
+
+        <!-- SELECTED ITEMS -->
+        <div id="selection_container">
+            <div id="Home_Content">
+                <div id="profile_components">
+                    <div class="conponent_container">
+                        <div class="profile_container" id="profile_pictures">
+                            <h2>
+                                Picture
+                            </h2>
+                        </div>
+                        <img src="assets/images/FB_IMG_1695788474288-removebg-preview.png" alt="">
+                    </div>
+
+                    <div class="conponent_container">
+                        <div class="profile_container" id="About">
+                            <h2>
+                                About Me
+                            </h2>
+                        </div>
+                        <!-- <h2>Hi My name is Christian David Bernal</h2> -->
+                        <div id="option_about">Skills</div>
+                        <div id="option_about">FrontEnd</div>
+                        <div id="option_about">BackEnd</div>
+                        <div id="option_about">Knowledge</div>
+                        <div id="option_about">Hobbies</div>
+                    </div>
+
+                    <div class="conponent_container">
+                        <div class="profile_container" id="More">
+                            <h2>
+                                More
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div id="Project_Content">
+                <div id="project_item_container">
+                    <a id="project_item" href="https://pamous.github.io">
+                        <div id="project_type" title="Pamous">
+                            <img id="Project_image" src="assets/images/linear_logo_inverse_2.svg" alt="Pam">
+                            <h2 id="Project_name">Pamous</h2>
+                        </div>
+                    </a>
+                    <a id="project_item" href="#BOT-InProgress">
+                        <div id="project_type" title="Pam Bot">
+                            <img id="Project_image" src="assets/images/golden_logo-inverse_2.svg" alt="Pam Bot">
+                            <h2 id="Project_name">Pam AI</h2>
+                        </div>
+                    </a>
+                    <!-- <div id="project_item">
+                        <div id="project_type"></div>
+                    </div> -->
+                </div>
+            </div>
+            <div id="Related_Content"></div>
+        </div>
+
+        <!-- FOOTER -->
+        <div id="footer">
+            <div class="layer-one">
+                <a href="" id="">Legal Use</a>
+                <a href="" id="">About More</a>
+                <a href="" id="">Contact</a>
+            </div>
+            <div class="layer-two">
+                <p>
+                    This is originally. <br> background-images here can be cited in moewalls.org <br>
+                    &copy; 2024 Christian David Bernal
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
+
+<!-- JAVASCRIPT -->
+<script src="assets/js/interaction.js"></script>
+<script src="assets/js/networkStatus.js"></script>

@@ -1,0 +1,180 @@
+#Home_Content {
+    margin: 2em 0;
+}
+
+#Home_Content #profile_components {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#Home_Content #profile_components .conponent_container .profile_container {
+    width: 360px;
+    height: 64px;
+    background-color: black;
+    /* background-image: url('../images/sunlight-flower-field.gif'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  	clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 60%, 80% 100%, 20% 100%, 0% 60%, 0% 20%);
+    text-align: center;
+}
+
+#Home_Content #profile_components .conponent_container .profile_container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Change the color and transparency level here */
+    pointer-events: none;
+}
+
+#Home_Content #profile_components .conponent_container .profile_container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: linear-gradient(-45deg, #660e0ac2, #0e211ac2, #0e0e21c2, #5b5b0ec2);
+    background-size: 200% 200%;
+    background-repeat: no-repeat;  	
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 60%, 80% 100%, 20% 100%, 0% 60%, 0% 20%);
+    background-size: 200% 200%;
+    animation: gradientforward 10s linear infinite;
+}
+
+#Home_Content #profile_components .conponent_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+#Home_Content #profile_components .conponent_container img {
+    width: 256px;
+    height: 256px;
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#Project_Content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Project_Content #project_item_container {
+    display: grid;
+    grid-template-rows: repeat(3, 256px);
+    grid-template-columns: repeat(5, 256px);
+    gap: 2px;
+}
+
+#Project_Content #project_item_container #project_item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Change the color and transparency level here */
+    pointer-events: none;
+}
+
+#Project_Content #project_item_container #project_item {
+    width: 252px;
+    height: 252px;
+    background-color: black;
+    /* background-image: url('../images/sunlight-flower-field.gif'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Project_Content #project_item_container #project_item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: linear-gradient(-45deg, #660e0ac2, #0e211ac2, #0e0e21c2, #5b5b0ec2);
+    background-size: 200% 200%;
+    background-repeat: no-repeat;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
+    background-size: 200% 200%;
+    animation: gradientforward 10s linear infinite;
+}
+
+#Project_Content #project_item_container #project_item #project_type {
+    width: 240px;
+    height: 240px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Project_Content #project_item_container #project_item #project_type #Project_image {
+    width: 150px;
+    height: 150px;
+}
+
+#Project_Content #project_item_container #project_item #project_type[title]::after {
+    content: attr(title);
+    position: absolute;
+    left: 50%;
+    bottom: 125%; /* Position above the element */
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    visibility: hidden;
+    z-index: 10; /* Ensure tooltip appears above other elements */
+}
+
+@keyframes gradientforward {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}

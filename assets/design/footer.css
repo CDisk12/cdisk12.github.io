@@ -1,0 +1,20 @@
+#footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer .layer-one {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+}
+
+#footer .layer-two {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
