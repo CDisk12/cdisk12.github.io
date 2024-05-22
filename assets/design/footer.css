@@ -7,8 +7,9 @@
 
 #footer .layer-one {
     display: flex;
-    width: 40%;
+    width: 100%;
     justify-content: space-around;
+    align-items: center;
 }
 
 #footer .layer-two {

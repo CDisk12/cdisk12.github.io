@@ -1,34 +1,41 @@
 :root {
-    background: #141414;
+    --moonlit: url('https://drive.google.com/file/d/1I1Cjm9HmQVCxDRnEhQP4gFm9glJ4FxiQ/view?usp=sharing');
+    --forest: url('https://drive.google.com/file/d/1SMqrgg4HHFxTR6vwSh0CRGdVwNMR0mrv/view?usp=sharing');
+    --flower: url('');
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     padding: 0;
     margin: 0;
     font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
     color: aliceblue;
-    /* background-image:   url('../images/moonlight-beach.gif'); */
-    background-image:   radial-gradient(circle at 20% 30%, #660e0ac2, transparent),
+    background-image:   url('../images/moonlight-beach.gif');
+    /* background-image:   radial-gradient(circle at 20% 30%, #660e0ac2, transparent),
                         radial-gradient(circle at 80% 70%, #0e211ac2, transparent),
                         radial-gradient(circle at 60% 20%, #0e0e21c2, transparent),
                         radial-gradient(circle at 30% 80%, #5b5b0ec2, transparent);
     background-size: 200% 200%;
-    animation: animateBackground 10s linear infinite;
-    /* background-size: cover;
-    background-repeat: no-repeat; */
+    animation: animateBackground 10s linear infinite; */
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+    overflow: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 body::before {
     content: '';
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Change the color and transparency level here */
-    pointer-events: none; /* Allows interaction with the content under the overlay */
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    z-index: -1;
 }
 
 @keyframes animateBackground {

@@ -2,6 +2,11 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+html {
+    user-select: none;
+}
+
 a {
     text-decoration: none;
+    color: aliceblue;
 }

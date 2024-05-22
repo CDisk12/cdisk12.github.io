@@ -1,3 +1,4 @@
+
 :root {
     --darkmode: #141414;
     --lightmode: #e0e0e0;
@@ -7,15 +8,18 @@
 }
 
 #navbar {
-    position: relative;
+    position: fixed;
     display: flex;
+    width: 100%;
+    top: 0;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2em;
+    padding: 0;
     background: linear-gradient(var(--darkmode), transparent);
     /* border: 0.1px solid darkgray; */
     margin: 0;
     overflow: hidden;
+    z-index: 100;
 }
 
 #navbar h2 {
@@ -36,6 +40,7 @@
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
+    font-weight: bolder;
     padding: 0 .5em;
     cursor: pointer;
     transition:  500ms color ease-in-out;
@@ -47,11 +52,39 @@
 }
 
 #navbar #item_container #item_select input:not(:checked):hover + label {
-    color: red;
+    transition-property: "";
+    background: linear-gradient(45deg, #e6fb04, #ff6600, 
+        #00ff66, #00ffff, #ff00ff, #ff0099, #6e0dd0, 
+        #ff3300, #099fff);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    opacity: 0.5;
+    background-size: 400%;
+    animation: glow 20s linear infinite;
 }
 
 #navbar #item_container #item_select input:checked + label {
-    color: limegreen;
+    transition-property: "";
+    background: linear-gradient(45deg, #e6fb04, #ff6600, 
+        #00ff66, #00ffff, #ff00ff, #ff0099, #6e0dd0, 
+        #ff3300, #099fff);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    opacity: 0.5;
+    background-size: 400%;
+    animation: glow 20s linear infinite;
+}
+
+@keyframes glow {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
 }
 
 #navbar #item_container #indicator {
@@ -67,4 +100,3 @@
 #navbar #item_container #item_select label:hover ~ #indicator {
     transition: left 0.3s ease;
 }
-

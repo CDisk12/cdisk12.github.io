@@ -12,6 +12,7 @@
 
         <!-- ASSETS -->
         <link rel="stylesheet" href="assets/design/display_home.css">
+        <link rel="stylesheet" href="assets/design/display_popup.css">
 
         <!-- AUGMENTED UI -->
         <link rel="stylesheet" type="text/css" href="https://unpkg.com/augmented-ui@2/augmented-ui.min.css">
@@ -45,68 +46,203 @@
         <!-- SELECTED ITEMS -->
         <div id="selection_container">
             <div id="Home_Content">
-                <div id="profile_components">
-                    <div class="conponent_container">
-                        <div class="profile_container" id="profile_pictures">
-                            <h2>
-                                Picture
-                            </h2>
-                        </div>
-                        <img src="assets/images/FB_IMG_1695788474288-removebg-preview.png" alt="">
-                    </div>
-
-                    <div class="conponent_container">
-                        <div class="profile_container" id="About">
-                            <h2>
-                                About Me
-                            </h2>
-                        </div>
-                        <!-- <h2>Hi My name is Christian David Bernal</h2> -->
-                        <div id="option_about">Skills</div>
-                        <div id="option_about">FrontEnd</div>
-                        <div id="option_about">BackEnd</div>
-                        <div id="option_about">Knowledge</div>
-                        <div id="option_about">Hobbies</div>
-                    </div>
-
-                    <div class="conponent_container">
-                        <div class="profile_container" id="More">
-                            <h2>
-                                More
-                            </h2>
-                        </div>
-                    </div>
-                </div>
+                <table id="profile_components">
+                    <tr id="profile_header">
+                        <th id="conponent_titles">Basics</th>
+                        <th id="conponent_titles">More</th>
+                        <th id="conponent_titles">Knowledge</th>
+                    </tr>
+                    <tr id="profile_content">
+                        <td id="conponent_items">
+                            <div id="basics">
+                                <h3 id="text">
+                                    Name: <span id="popup" onclick="toggleImage()">Christian David Bernal</span>
+                                </h3>
+                            </div>
+                        </td>
+                        <td id="conponent_items">
+                            <div id="more">
+                                <h3>
+                                    <span id="text">
+                                        Hobbies
+                                    </span>
+                                </h3>
+                            </div>
+                        </td>
+                        <td id="conponent_items">
+                            <div id="know">
+                                <h3>
+                                    <span id="text">
+                                        Programming Front-End
+                                    </span>
+                                </h3>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="profile_content">
+                        <td id="conponent_items">
+                            <div id="basics">
+                                <h3 id="text">
+                                    Contact: +63 936-930--0246
+                                </h3>
+                            </div>
+                        </td>
+                        <td id="conponent_items">
+                            <div id="more">
+                                <h3>
+                                    <span id="text">
+                                        Hacking
+                                    </span>
+                                </h3>
+                            </div>
+                        </td>
+                        <td id="conponent_items">
+                            <div id="know">
+                                <h3>
+                                    <span id="text">
+                                        Programming Back-End
+                                    </span>
+                                </h3>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="profile_content">
+                        <td id="conponent_items">
+                            <div id="basics">
+                                <h3 id="text">
+                                    Email: cdbernal36@gmail.com
+                                </h3>
+                            </div>
+                        </td>
+                        <td id="conponent_items">
+                            <div id="more">
+                                <h3>
+                                    <span id="text">
+                                        Skills
+                                    </span>
+                                </h3>
+                            </div>
+                        </td>
+                        <td id="conponent_items">
+                            <div id="know">
+                                <h3>
+                                    <span id="text">
+                                        Music
+                                    </span>
+                                </h3>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="profile_content">
+                        <td id="conponent_items">
+                            <div id="basics">
+                                <h3 id="text">
+                                    Age: 21
+                                </h3>
+                            </div>
+                        </td>
+                        <td id="conponent_items">
+                            <div id="more">
+                                <h3>
+                                    <span id="text">
+                                        Journal
+                                    </span>
+                                </h3>
+                            </div>
+                        </td>
+                        <td id="conponent_items">
+                            <div id="know">
+                                <h3>
+                                    <span id="text">
+                                        Basic Programming
+                                    </span>
+                                </h3>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="profile_content">
+                        <td id="conponent_items">
+                            <div id="basics">
+                                <h3 id="text">
+                                    <!--  -->
+                                </h3>
+                            </div>
+                        </td>
+                        <td id="conponent_items">
+                            <div id="more">
+                                <h3>
+                                    <span id="text">
+                                        Look-Up
+                                    </span>
+                                </h3>
+                            </div>
+                        </td>
+                        <td id="conponent_items">
+                            <div id="know">
+                                <h3>
+                                    <span id="text">
+                                        Arts
+                                    </span>
+                                </h3>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="profile_content">
+                        <td id="conponent_items">
+                            <div id="basics">
+                                <h3 id="text">
+                                    <!--  -->
+                                </h3>
+                            </div>
+                        </td>
+                        <td id="conponent_items">
+                            <div id="more">
+                                <h3>
+                                    <span id="text">
+                                        <!--  -->
+                                    </span>
+                                </h3>
+                            </div>
+                        </td>
+                        <td id="conponent_items">
+                            <div id="know">
+                                <h3>
+                                    <span id="text">
+                                        <!--  -->
+                                    </span>
+                                </h3>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
-            <div id="Project_Content">
-                <div id="project_item_container">
-                    <a id="project_item" href="https://pamous.github.io">
-                        <div id="project_type" title="Pamous">
-                            <img id="Project_image" src="assets/images/linear_logo_inverse_2.svg" alt="Pam">
-                            <h2 id="Project_name">Pamous</h2>
-                        </div>
-                    </a>
-                    <a id="project_item" href="#BOT-InProgress">
-                        <div id="project_type" title="Pam Bot">
-                            <img id="Project_image" src="assets/images/golden_logo-inverse_2.svg" alt="Pam Bot">
-                            <h2 id="Project_name">Pam AI</h2>
-                        </div>
-                    </a>
-                    <!-- <div id="project_item">
-                        <div id="project_type"></div>
-                    </div> -->
-                </div>
+        <div id="Project_Content">
+            <div id="project_item_container">
+                <a id="project_item" href="https://pamous.github.io">
+                    <div id="project_type" title="Pamous">
+                        <img id="Project_image" src="assets/images/linear_logo_inverse_2.svg" alt="Pam">
+                        <h2 id="Project_name">Pamous</h2>
+                    </div>
+                </a>
+                <a id="project_item" href="#BOT-InProgress">
+                    <div id="project_type" title="Pam Bot">
+                        <img id="Project_image" src="assets/images/golden_logo-inverse_2.svg" alt="Pam Bot">
+                        <h2 id="Project_name">Pam AI</h2>
+                    </div>
+                </a>
+                <!-- <div id="project_item">
+                    <div id="project_type"></div>
+                </div> -->
             </div>
-            <div id="Related_Content"></div>
         </div>
 
         <!-- FOOTER -->
         <div id="footer">
             <div class="layer-one">
-                <a href="" id="">Legal Use</a>
-                <a href="" id="">About More</a>
-                <a href="" id="">Contact</a>
+                <span id="">Legal Use</a>
+                <span id="">About More</a>
+                <span id="">Contact</a>
             </div>
             <div class="layer-two">
                 <p>
@@ -115,9 +251,11 @@
                 </p>
             </div>
         </div>
+        <div id="overlay"></div>
     </body>
 </html>
 
 <!-- JAVASCRIPT -->
 <script src="assets/js/interaction.js"></script>
 <script src="assets/js/networkStatus.js"></script>
+<script src="assets/js/pop-up.js"></script>

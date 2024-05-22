@@ -1,65 +1,93 @@
+:root {
+    --moonlit: url('https://drive.google.com/file/d/1I1Cjm9HmQVCxDRnEhQP4gFm9glJ4FxiQ/view?usp=sharing');
+    --forest: url('https://drive.google.com/file/d/1SMqrgg4HHFxTR6vwSh0CRGdVwNMR0mrv/view?usp=sharing');
+    --flower: url('');
+}
+
+#selection_container {
+    margin-top: 5%;
+}
+
 #Home_Content {
     margin: 2em 0;
 }
 
 #Home_Content #profile_components {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
 
-#Home_Content #profile_components .conponent_container .profile_container {
-    width: 360px;
-    height: 64px;
-    background-color: black;
-    /* background-image: url('../images/sunlight-flower-field.gif'); */
-    background-size: cover;
-    background-repeat: no-repeat;
+/* Ensure the black background doesn't completely block the background image */
+#Home_Content #profile_components #profile_header,
+#Home_Content #profile_components #profile_content:last-child #conponent_items:first-child,
+#Home_Content #profile_components #profile_content #conponent_items:nth-child(2),
+#Home_Content #profile_components #profile_content #conponent_items:last-child {
+    background-blend-mode: darken;
+    background: linear-gradient(
+                45deg, 
+                rgb(230, 251, 4, .1), 
+                rgb(255, 102, 0, .1), 
+                rgb(0, 255, 102, .1), 
+                rgb(0, 255, 255, .1), 
+                rgb(255, 0, 255, .1), 
+                rgb(255, 0, 153, .1), 
+                rgb(110, 13, 208, .1), 
+                rgb(255, 51, 0, .1), 
+                rgb(9, 159, 255, .1));
+		background-size: 400%;
+		animation: glow 20s linear infinite;
+}
+
+@keyframes glow {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 400%;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+#Home_Content #profile_components #profile_content #conponent_items div h3 #text {
     cursor: pointer;
-  	clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 60%, 80% 100%, 20% 100%, 0% 60%, 0% 20%);
+}
+
+#Home_Content #profile_components #profile_content #conponent_items:first-child {
+    background-color: transparent;
+}
+
+#Home_Content #profile_components #profile_content {
     text-align: center;
 }
 
-#Home_Content #profile_components .conponent_container .profile_container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2); /* Change the color and transparency level here */
-    pointer-events: none;
+#Home_Content #profile_components #profile_header:first-child #conponent_titles:first-child {
+    border-top-left-radius: 25px;
 }
 
-#Home_Content #profile_components .conponent_container .profile_container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-image: linear-gradient(-45deg, #660e0ac2, #0e211ac2, #0e0e21c2, #5b5b0ec2);
-    background-size: 200% 200%;
-    background-repeat: no-repeat;  	
-    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 60%, 80% 100%, 20% 100%, 0% 60%, 0% 20%);
-    background-size: 200% 200%;
-    animation: gradientforward 10s linear infinite;
+#Home_Content #profile_components #profile_header:first-child #conponent_titles:last-child {
+    border-top-right-radius: 25px;
 }
 
-#Home_Content #profile_components .conponent_container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2em;
+#Home_Content #profile_components #profile_content:last-child #conponent_items:first-child {
+    border-bottom-left-radius: 25px;
 }
 
-#Home_Content #profile_components .conponent_container img {
-    width: 256px;
-    height: 256px;
+#Home_Content #profile_components #profile_content:last-child #conponent_items:last-child {
+    border-bottom-right-radius: 25px;
 }
 
+#Home_Content #profile_components #profile_header #conponent_titles {
+    padding: 1em 8em;
+    font-size: 20px;
+}
+
+#Home_Content #profile_components #profile_content #conponent_items {
+    padding: .5em 2em;
+}
 
 @keyframes rotate {
     0% {
@@ -87,7 +115,7 @@
 
 #Project_Content #project_item_container {
     display: grid;
-    grid-template-rows: repeat(3, 256px);
+    grid-template-rows: 256px;
     grid-template-columns: repeat(5, 256px);
     gap: 2px;
 }
@@ -99,7 +127,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2); /* Change the color and transparency level here */
+    background-color: rgba(0, 0, 0, .1); /* Change the color and transparency level here */
     pointer-events: none;
 }
 
@@ -107,7 +135,7 @@
     width: 252px;
     height: 252px;
     background-color: black;
-    /* background-image: url('../images/sunlight-flower-field.gif'); */
+    background-image: url('../images/sunlight-flower-field.gif');
     background-size: cover;
     background-repeat: no-repeat;
     clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
@@ -136,7 +164,7 @@
 #Project_Content #project_item_container #project_item #project_type {
     width: 240px;
     height: 240px;
-    background-color: rgba(255, 255, 255, 0.8); 
+    background-blend-mode: darken;
     clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
     display: flex;
     flex-direction: column;
