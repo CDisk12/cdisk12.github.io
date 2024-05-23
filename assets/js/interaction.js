@@ -46,3 +46,14 @@ document.addEventListener("DOMContentLoaded", function() {
         returnToLastChecked();
     });
 });
+
+document.querySelectorAll('input[name="item_select"]').forEach((radio) => {
+    radio.addEventListener('change', function() {
+        document.getElementById('selection_container').style.display = this.id === 'Home' ? 'flex' : 'none';
+        document.getElementById('Project_Content').style.display = this.id === 'Project' ? 'flex' : 'none';
+        document.getElementById('Relate_Content').style.display = this.id === 'Relate' ? 'flex' : 'none';
+    });
+});
+
+// Trigger the change event on page load to set the correct display
+document.querySelector('input[name="item_select"]:checked').dispatchEvent(new Event('change'));

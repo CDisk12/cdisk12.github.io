@@ -4,8 +4,12 @@
     --flower: url('');
 }
 
+
 #selection_container {
     margin-top: 5%;
+    justify-content: space-around;
+    align-items: center;
+    transition: 5s ease;
 }
 
 #Home_Content {
@@ -131,6 +135,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 5%;
+    transition: 5s ease;
 }
 
 #Project_Content #project_item_container {
