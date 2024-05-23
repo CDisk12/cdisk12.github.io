@@ -32,7 +32,6 @@ function showOnlinePopup() {
 
     const content = document.createElement('h3');
     content.id = 'network_content_on';
-    content.innerHTML = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You are online.';
 
     onlinePopup.appendChild(title);
     onlinePopup.appendChild(content);
@@ -67,7 +66,6 @@ function showOfflinePopup() {
 
     const content = document.createElement('h3');
     content.id = 'network_content_off';
-    content.innerHTML = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You are offline.';
 
     offlinePopup.appendChild(title);
     offlinePopup.appendChild(content);
